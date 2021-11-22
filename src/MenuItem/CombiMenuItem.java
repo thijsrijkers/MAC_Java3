@@ -3,7 +3,7 @@ package MenuItem;
 import java.util.ArrayList;
 
 public class CombiMenuItem implements Orderable {
-    private Double price;
+    private double price;
     private ArrayList<Consumable> consumables;
 
     public CombiMenuItem(Double price, ArrayList<Consumable> consumables) {
@@ -11,7 +11,7 @@ public class CombiMenuItem implements Orderable {
         this.consumables = consumables;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 

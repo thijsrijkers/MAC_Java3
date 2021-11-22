@@ -1,5 +1,9 @@
 package Location;
 
+import MenuItem.Consumable;
+import Exceptions.TooFatException;
+import MenuItem.Orderable;
+import People.Customer;
 import People.Employee;
 import java.util.ArrayList;
 
@@ -35,5 +39,17 @@ public class McDonalds {
 
     public void setParkinglot(Parkinglot parkinglot) {
         this.parkinglot = parkinglot;
+    }
+
+    public String orderConsumable(Orderable orderable, Customer customer) throws TooFatException {
+        if(customer.getWeight() > 100.00)
+            throw new TooFatException();
+
+        if(orderable.getPrice() <= customer.getWallet()) {
+            return "Klant heeft eten gekocht";
+        }else{
+            return "Klant heeft te weinig geld, WEGWEZEN!";
+        }
+
     }
 }

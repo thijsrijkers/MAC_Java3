@@ -1,11 +1,10 @@
 package MenuItem.IceCream;
 
-import MenuItem.Orderable;
+import MenuItem.Consumable;
 
-abstract class McFlurry implements Orderable {
-    private double price;
+abstract class McFlurry extends Consumable {
 
     public McFlurry(double price) {
-        this.price = price;
+        super(price);
     }
 }
